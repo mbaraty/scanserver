@@ -1,0 +1,6 @@
+<h2>Hidden Files: </h2>
+<ul>
+{% for f in list %}
+    <li><a href={% url 'file' f.id %}>{{ f.date_created }}</a></li>
+{% endfor %}
+</ul>

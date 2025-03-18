@@ -1,0 +1,7 @@
+<h2>Processed Files: </h2>
+<ul>
+{% for f in list %}
+    <li><a href={% url 'file' f.id %}>{{ f.date_created }}</a></li>
+{% endfor %}
+</ul>
+<h3><a href={% url 'hidden' %}>View hidden files</a></h3>
