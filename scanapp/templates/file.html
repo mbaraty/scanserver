@@ -1,11 +1,17 @@
-<h2> {{ file.date_created }} </h2>
-<iframe class="pdf" src="{{ MEDIA_URL }}{{ file.path }}" width="75%" height="50%"></iframe>
+{% extends "base.html" %}
 
-<form method="post" action="{% url 'download_pdf' file.id %}">
-    {% csrf_token %}
-    <label>
-        Name:
-        <input type=text name="name" value="{{ file.date_created }}" />
-    </label>
-    <button type=submit>Download PDF</button>
-</form> 
+{% block content %}
+    <h2> {{ file.date_created }} </h2>
+    <form method="post" action="{% url 'download_pdf' file.id %}">
+        {% csrf_token %}
+        <label>
+            Name:
+            <input type=text name="name" value="{{ file.date_created }}"/>
+        </label>
+        <button type=submit>Download PDF</button>
+    </form>
+    <iframe class="pdf" src="{{ MEDIA_URL }}{{ file.path }}" width="75%"></iframe>
+
+
+
+{% endblock %}

@@ -1,7 +1,13 @@
+{%  extends "base.html" %}
+
+{% block content %}
 <h2>Processed Files: </h2>
 <ul>
 {% for f in list %}
-    <li><a href={% url 'file' f.id %}>{{ f.date_created }}</a></li>
+    <li>
+       <span> <a href={% url 'file' f.id %}>{{ f.date_created }}</a>
+           {{ f.description }} </span>
+    </li>
 {% endfor %}
 </ul>
-<h3><a href={% url 'hidden' %}>View hidden files</a></h3>
+{% endblock %}

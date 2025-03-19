@@ -1,5 +1,10 @@
-django
+django~=4.2.20
 mysqlclient
-django-environ
-pdf2image
+django-environ~=0.12.0
+pdf2image~=1.17.0
 pillow
+django-bootstrap-v5
+numpy~=2.2.4
+opencv-python-headless
+pytesseract~=0.3.13
+pandas~=2.2.3

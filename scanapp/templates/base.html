@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScanServer v0.1</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="navbar navbar-dark bg-dark">
+    <a class="nav-link link-light" href="{% url "index" %}">Home</a>
+    <a class="nav-link link-light" href="/admin">Admin</a>
+    <a class="nav-link link-light" href="{% url "hidden" %}">Hidden</a>
+
+</div>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
